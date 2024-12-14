@@ -1,0 +1,19 @@
+public int RemoveDuplicate(int[] arr)
+{
+if(arr.Length ==0)
+return 0;
+
+int j=0;
+for(int i=1;i<arr.Length;i++)
+{
+if(arr[j] != arr[i])
+{
+arr[++j] = arr[i];
+
+}
+
+}
+return j+1;
+
+
+}
