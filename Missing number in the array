@@ -1,0 +1,16 @@
+public int Missing(int[] nums)
+{
+  int n = nums.Length;
+  Array.sort(nums);
+
+  for(int i=0; i<nums.Length; i++)
+  {
+      if(nums[i] != i)
+      {
+      return i;
+      }
+  }
+  return n;
+
+
+}
