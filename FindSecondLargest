@@ -1,0 +1,32 @@
+public static int FindSecondLargest(int[] arr)
+{
+// Edge case: If the array has less than 2 elements, return -1
+      if(arr.Length < 2)
+        return -1;
+
+      int Largest = int.MAxValue;
+      int SecondLArgest = int.MAxValue;
+// Traverse the array to find the largest and second largest
+      foreach(int num in arr)
+          {
+            if(num > Largest)
+              {
+// Update second largest before updating the largest
+                SecondLArgest = Largest;
+                Largest = num;
+              }
+else if(num > SecondLArgest && num != Larget)
+{
+
+SecondLArgest = num;
+
+}
+
+
+}
+ // If second largest is not updated, return -1
+return (SecondLArgest == int.MaxValue) ? -1 : SecondLArgest;
+
+
+
+}
