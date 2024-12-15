@@ -1,0 +1,29 @@
+public static int Maxprofit(int[] Prices)
+{
+int minprice = int.MaxValue;
+int maxprofit = 0;
+
+foreach(inr price in Prices)
+{
+
+if(price < minprice)
+{
+minprice = price;
+}
+else
+{
+  int profit = price - minprice;
+  if(profit > maxprofit)
+{
+maxprofit = profit;
+}
+
+}
+
+
+}
+return maxprofit;
+
+
+
+}
