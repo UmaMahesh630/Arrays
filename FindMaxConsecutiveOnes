@@ -1,0 +1,26 @@
+public int FindMaxConsecutiveOnes(int[] nums)
+{
+int Count =0 ;
+int MaxCount=0;
+
+for(int i=0; i<nums.Length;i++)
+{
+  if(nums[i] == 1)
+  {
+   count++;
+   if(count > MaxCount)
+    {
+        MaxCount = count;
+    }
+  }
+else
+{
+count = 0;
+}
+
+
+}
+
+return MaxCount;
+
+}
