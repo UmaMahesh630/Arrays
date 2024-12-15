@@ -1,0 +1,26 @@
+arr = [10, 5, 2, 7, 1, 9] and k = 15:
+
+The longest subarray with a sum of 15 is [5, 2, 7, 1], so maxLength = 4.
+
+public static int LongestSubarray(int[] arr, int k)
+{
+  int maxlength = 0;
+  for(int i=0; i< arr.Length; i++)
+  {
+   int currrentsum = 0;
+   for(int j=0; j<arr.Length; j++)
+    {
+        currrentsum += arr[j];
+
+        if(currrentsum == k)
+          {
+            maxlength = Math.Max(maxlength,j-i+1);
+          }
+    }
+
+
+  }
+    return maxlength;
+
+
+}
